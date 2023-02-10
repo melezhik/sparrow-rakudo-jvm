@@ -17,7 +17,7 @@ RUN addgroup worker wheel
 RUN sudo echo
 USER worker
 RUN find /var/rakudo/rakudo-2022.12/install/bin/ 
-RUN sudo ln -s /var/rakudo/rakudo-2022.12/install/bin/rakudo /var/rakudo/rakudo-2022.12/install/raku
+RUN sudo ln -s /var/rakudo/rakudo-2022.12/install/bin/rakudo /var/rakudo/rakudo-2022.12/install/bin/raku
 RUN git clone https://github.com/ugexe/zef.git /tmp/zef && \
 cd /tmp/zef && \
 raku -I. bin/zef install . --/test --install-to=home
