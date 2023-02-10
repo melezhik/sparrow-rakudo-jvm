@@ -18,7 +18,7 @@ RUN sudo echo
 USER worker
 RUN find /var/rakudo/rakudo-2022.12/install/bin/ 
 RUN sudo ln -s /var/rakudo/rakudo-2022.12/install/bin/rakudo /var/rakudo/rakudo-2022.12/install/bin/raku
-RUN cd /tmp/ && git clone git clone https://github.com/hythm7/Pakku.git && \
+RUN cd /tmp/ && git clone https://github.com/hythm7/Pakku.git && \
 cd /tmp/Pakku && raku -I. bin/pakku add noprecomp notest to home .
 RUN zef update
 RUN zef install --/test JSON::Fast --install-to=home
